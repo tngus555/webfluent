@@ -1,0 +1,109 @@
+@charset "UTF-8";
+
+.hero {
+  height: 46rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  /* top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0; ->    inset:0; */
+
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 5;
+}
+
+.hero figure {
+  top: 0;
+  left: 0;
+  position: absolute;
+  /* border: 1px solid red; */
+  animation: reveal-ani 1s;
+}
+
+.hero img {
+  object-position: 50% 10%;
+}
+.hero .inner {
+  position: relative;
+  /* 절대배치된  visual-title의 기준 */
+  height: 100%;
+  /* background: skyblue; */
+  z-index: 10;
+}
+.visual-title {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%); /* trfty */
+  /* background: red; */
+  color: #fff;
+  width: 69rem;
+}
+
+.visual-title h2 {
+  font-weight: 700;
+  font-size: 4.8rem;
+  line-height: 1.2;
+  text-transform: uppercase; /* 대문자로 변경 */
+}
+
+.visual-title h2 strong {
+  color: var(--main-color);
+}
+.visual-title p {
+  font-weight: 500;
+  font-size: 2rem;
+  margin-top: 2.4rem;
+}
+
+.visual-title .cta {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20rem;
+  height: 4rem;
+  color: #fff;
+  background: var(--main-color);
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 1.5;
+  margin-top: 3.2rem;
+}
+
+.visual-title .cta:hover {
+  background: var(--main-dark);
+  color: #fff;
+}
+
+.business-list {
+  display: flex;
+  width: 118rem;
+  justify-content: space-between;
+  margin-top: 9rem;
+}
+.business-list li {
+  box-shadow: 0 8px rgba(0, 0, 0, 0.05);
+  /* display: flex; */
+  border: 1px solid #bdbdbd;
+  width: 28rem;
+  padding: 28px 32px;
+}
+.business-list li dl dt {
+  font-weight: 700;
+  font-size: 2rem;
+  color: var(--main-dark);
+  flex-wrap: wrap;
+  line-height: 1.5;
+}
+.business-list li dl dd {
+  margin-top: 2rem;
+  line-height: 1.5;
+  color: var(--text-color);
+}
