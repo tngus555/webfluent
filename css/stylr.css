@@ -81,29 +81,166 @@
   background: var(--main-dark);
   color: #fff;
 }
+/*main 하위 섹션 전체 적용 (hero제외):2025.09.04 김수현 */
 
+main > section + section {
+  padding: 9rem 0 3rem;
+}
+main > section:last-child {
+  padding-bottom: 12rem;
+}
+
+/* 사업소개 */
 .business-list {
   display: flex;
-  width: 118rem;
-  justify-content: space-between;
-  margin-top: 9rem;
+  /* width: 118rem; */
+  /* justify-content: space-between; */
+  gap: 2rem;
 }
 .business-list li {
-  box-shadow: 0 8px rgba(0, 0, 0, 0.05);
-  /* display: flex; */
-  border: 1px solid #bdbdbd;
+  box-shadow: 0 8px 0 rgba(0, 0, 0, 0.05);
+  border: 1px solid var(--black30);
   width: 28rem;
-  padding: 28px 32px;
+  height: 30.2rem;
+  padding: 2.8rem 3.2rem;
+  flex: 1 1 auto;
 }
 .business-list li dl dt {
   font-weight: 700;
   font-size: 2rem;
   color: var(--main-dark);
-  flex-wrap: wrap;
-  line-height: 1.5;
+  /* flex-wrap: wrap; */
+  line-height: 1.3;
+  /* margin-bottom: 2rem; */
 }
 .business-list li dl dd {
-  margin-top: 2rem;
+  margin-top: 1.2rem;
+  font-weight: 500;
   line-height: 1.5;
   color: var(--text-color);
+}
+.business-list li dl dd:first-of-type {
+  margin-top: 2rem;
+}
+
+/* works */
+
+.sec-title {
+  font-weight: 500;
+  font-size: 3.2rem;
+  color: var(--main-color);
+}
+
+.sec-title p {
+  font-weight: 500;
+  font-size: 2rem;
+  margin-top: 0.4rem;
+}
+
+.works-list {
+  display: flex;
+  margin-top: 2.8rem;
+  flex-wrap: wrap; /* fxww 줄바꿈 */
+}
+.works-list li {
+  flex: 1px 1px -50%;
+  position: relative; /* 절대배치된 p의 기준 */
+  overflow: hidden;
+}
+.works-list li figure {
+  transition: 0.4s;
+}
+.works-list li:hover figure {
+  transform: scale(1.3);
+  filter: blur(10px);
+}
+
+.works-list li p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-weight: 500;
+  font-size: 2.5rem;
+  text-align: center;
+}
+.works-list li p strong {
+  display: block;
+  font-weight: 700;
+}
+
+/* news */
+.news-con {
+  display: flex;
+  gap: 6rem;
+}
+
+.news-con .news-text {
+  width: 48rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.8rem;
+}
+.news-text h4 {
+  font-weight: 700;
+  font-size: 2.4rem;
+  color: var(--title-color);
+}
+.news-con figure {
+  width: 64rem;
+}
+
+/* column */
+
+.column h4 {
+  font-weight: 500;
+  font-size: 2.8rem;
+  color: var(--main-color);
+}
+
+.column h5 {
+  font-weight: 700;
+  font-size: 3.2rem;
+  margin-top: 1.8rem;
+  color: var(--title-color);
+}
+
+.column h5 p {
+  margin-top: 1.8rem;
+  column-count: 2; /* colc */
+  text-align: justify; /* taj */
+}
+
+.column p + p {
+  text-align: right;
+  margin-top: 3rem;
+}
+
+.column p + p strong {
+  display: block;
+  font-weight: 700;
+}
+
+/* footer */
+
+.footer {
+  background: #333;
+  color: var(--white60);
+  padding: 5.2rem 0;
+}
+.foot-con {
+  display: flex;
+  justify-content: space-between; /* jcsb */
+  flex-direction: row-reverse; /* fxdrr */
+}
+.foot-text {
+  font-weight: 700;
+  font-size: 1.4rem;
+  line-height: 1.5;
+}
+
+.foot-text p + p {
+  margin-top: 0.8rem;
 }
