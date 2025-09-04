@@ -72,6 +72,8 @@ body {
   word-break: keep-all; /* wbka 어절 단위 줄 바꿈 */
   min-width: 320px; /* 최소화면 320px */
 } 
+
+/* 공통 레이아웃 */
 .inner {
   width: 118rem;
   margin: 0 auto;
@@ -112,4 +114,26 @@ body {
         filter: blur(0px);
 
 }
+}
+
+/* footer */
+
+.footer {
+  background: #333;
+  color: var(--white60);
+  padding: 5.2rem 0;
+}
+.foot-con {
+  display: flex;
+  justify-content: space-between; /* jcsb */
+  flex-direction: row-reverse; /* fxdrr */
+}
+.foot-text {
+  font-weight: 700;
+  font-size: 1.4rem;
+  line-height: 1.5;
+}
+
+.foot-text p + p {
+  margin-top: 0.8rem;
 }
