@@ -243,7 +243,24 @@
     </main>
     <!-- // e: main -->
     <hr />
-
+    <!-- 모바일용 메뉴 -->
+    <div class="m-menu">
+      <!-- h2.m-logo+ul.m-menu-list>li*5>a -->
+      <h2 class="m-logo">
+        <a href="#"><img src="./img/m-logo.svg" alt="logo" /></a>
+      </h2>
+      <ul class="m-menu-list">
+        <li><a href="#">ABOUT</a></li>
+        <li><a href="#">WORK</a></li>
+        <li><a href="#">NEWS</a></li>
+        <li><a href="#">STORY</a></li>
+        <li><a href="#">CONTACT US</a></li>
+      </ul>
+      <!-- button:button.btn-close>i.hidden{닫기} -->
+      <button type="button" class="btn-close">
+        <i class="hidden">닫기</i>
+      </button>
+    </div>
     <!-- footer.footer>.inner>.foot-con>.foot-logo+.foot-text -->
     <footer class="footer">
       <div class="inner">
@@ -259,5 +276,6 @@
       </div>
     </footer>
     <!-- // e: footer -->
+    <script src="./js/common.js"></script>
   </body>
 </html>
